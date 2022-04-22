@@ -2,8 +2,10 @@
 
     .container {
         position: relative;
+        padding-top: 3.5em;
         max-width: $container-width;
         width: 100%;
+        z-index: 500;
     }
 
     .group {

@@ -41,7 +41,7 @@
         align-items: center;
 
         > li {
-            margin: 0 0 0 32px;
+            margin: 0 0 0 2.5em;
         }
 
         li:last-child ul {
@@ -70,10 +70,12 @@
     }
 
     a {
-        @include fs(16px);
+        position: relative;
+        @include fs(18px);
         display: block;
         color: $color-0;
         text-decoration: none;
+        font-weight: 600;
         transition: $transition-1;
 
         &:hover,
@@ -85,6 +87,31 @@
             @include fs(12px);
             cursor: pointer;
             margin: 0 0 0 6px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -0.25em;
+            right: -0.25em;
+            height: 2px;
+            background: $color-1;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: 100% 100%;
+            transition: transform 0.4s cubic-bezier(0.53, 0.21, 0, 1);
+            will-change: transform;
+        }
+
+        &:not(.button).open {
+            //background: $color-grey-2;
+            color: $color-0;
+
+            &::after {
+                transform: scaleX(1);
+                transform-origin: 0% 0%;
+            }
         }
     }
 
