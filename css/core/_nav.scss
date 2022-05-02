@@ -78,8 +78,8 @@
         font-weight: 600;
         transition: $transition-1;
 
-        &:hover,
-        &:focus {
+        &:not(.button):hover,
+        &:not(.button):focus {
             color: $color-1;
         }
 

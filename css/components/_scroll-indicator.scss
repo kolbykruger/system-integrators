@@ -1,0 +1,43 @@
+.scroll-indicator {
+    position: absolute;
+    bottom: calc(5vh + 1.5em);
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.35;
+
+    &-icon {
+        width: 20px;
+        height: 34px;
+        border: 2px solid white;
+        border-radius: 1em;
+        position: relative;
+        text-align: center;
+    }
+
+    &-wheel {
+        height: 3px;
+        margin: 6px auto 0;
+        display: block;
+        width: 3px;
+        background-color: white;
+        border-radius: 50%;
+        animation: 2.2s ease infinite wheel-up-down;
+
+        @keyframes wheel-up-down {
+            0% {
+                transform: translate(0, -2px);
+                opacity: 0;
+            }
+            30% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(0, 6px);
+                opacity: 0;
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-$button-color: #fff;
+$button-color: $color-0;
 $button-background: $color-1;
 
 /* Button Styling */
@@ -45,6 +45,7 @@ $button-background: $color-1;
     color: $button-color;
     border-radius: 0.5em;
     line-height: 1;
+    font-size: 18px;
     font-weight: 600;
     transition: 150ms ease;
     text-decoration: none;
@@ -96,6 +97,30 @@ $button-background: $color-1;
             box-shadow: none;
             color: $color-2;
             border-color: $color-2
+        }
+    }
+
+    &-size-small {
+        padding: 0.425em 0.836em;
+    }
+
+    &-text {
+        background: none;
+        color: $color-0;
+        padding: 0;
+
+        &-color-primary {
+            color: $color-1;
+        }
+
+        &:hover,
+        &:focus {
+            background: none;
+            box-shadow: none;
+
+            i {
+                transform: translateX(15%)
+            }
         }
     }
 

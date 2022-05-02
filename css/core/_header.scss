@@ -1,8 +1,10 @@
 .header {
+    border-top: 0.5em solid $color-1;
 
     .container {
         position: relative;
-        padding-top: 3.5em;
+        padding-top: 2.5em;
+        padding-bottom: 2em;
         max-width: $container-width;
         width: 100%;
         z-index: 500;
@@ -15,7 +17,7 @@
 
     .logo {
         width:100%;
-        max-width: 240px;
+        max-width: 363px;
 
         a {
             display: block;

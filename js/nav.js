@@ -9,12 +9,11 @@ const menuPanelLinksNodeList = document.querySelectorAll('.menu .menu-panel a')
 const menuPanelLinks = Array.from(menuPanelLinksNodeList)
 
 // Menu exit
-const menuExitButton = document.querySelector('.menu .menu-exit')
+const menuOverlay = document.querySelector('.menu-overlay')
 
 navTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
         const id = trigger.getAttribute('data-category')
-        console.log(id)
         // check if it's already open
         // if it is, close it
         if (trigger.classList.contains('open')) {
@@ -40,6 +39,7 @@ function openMenuPanels(props) {
     navTriggers.forEach(trigger => {
         trigger.classList.remove('open')
     })
+
     // remove open from all menu panels
     menuPanels.forEach(panel => {
         panel.classList.remove('open')
@@ -47,12 +47,13 @@ function openMenuPanels(props) {
 
     // add props to appropriate elements
     props.trigger.classList.add('open')
+
     // menuPanels[props.id] ? menuPanels[props.id].classList.add('open') : null
     const activePanel = menuPanels.filter(panel => {
-        console.log(panel.dataset.category, 'vs', props.id)
         return panel.dataset.category == props.id
     })
-    console.log(activePanel)
+
+    //Add the class to the active panel (arr)
     activePanel[0].classList.add('open')
     menu.classList.add('open')
     document.body.classList.add('menu-open')
@@ -79,6 +80,6 @@ menuPanelLinks.forEach(link => {
 })
 
 // Menu exit
-// menuExitButton.addEventListener('click', () => {
-//     closeMenuPanels()
-// })
+menuOverlay.addEventListener('click', () => {
+    closeMenuPanels()
+})

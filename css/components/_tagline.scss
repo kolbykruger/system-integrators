@@ -1,0 +1,62 @@
+.tagline {
+    position: relative;
+    margin-bottom: 0;
+
+    .container {
+
+    }
+
+    .section-heading {
+        position: relative;
+        max-width: 1250px;
+        padding: 0 3em;
+        text-align: center;
+        margin: 3vh auto;
+        z-index: 2;
+
+        h2 {
+            @include fluid('font-size', 1.75rem, 3.5rem);
+            margin-bottom: 0.5em;
+            line-height: 1;
+
+            @media (min-width: 1921px) {
+                font-size: 4.5rem;
+            }
+        }
+
+        @media (max-width: 900px) {
+            padding: 1em;
+            margin: 1vh auto;
+        }
+    }
+
+    &-size-h2 {
+
+        .section-heading h2 {
+            @include fluid('font-size', 1.75rem, 3rem);
+            margin-bottom: 0.5em;
+
+            @media (min-width: 1921px) {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    &-size-h3 {
+        .section-heading  h2 {
+            @include fluid('font-size', 1.5rem, 2.5rem);
+            margin-bottom: 0.5em;
+
+            @media (min-width: 1921px) {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    &-line {
+
+    }
+    &-word {
+        overflow: hidden
+    }
+}
