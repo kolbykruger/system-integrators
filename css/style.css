@@ -2728,7 +2728,7 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  aspect-ratio: 1.25;
+  aspect-ratio: 1.5;
   will-change: transform;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
@@ -2738,6 +2738,8 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .features .details {
   position: relative;
@@ -2864,13 +2866,13 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
   grid-row: 1/span 1;
   -ms-grid-column: 1;
       grid-column-start: 1;
-  -ms-grid-column-span: 8;
-  grid-column-end: 9;
+  -ms-grid-column-span: 9;
+  grid-column-end: 10;
 }
 .features-direction-reverse .details {
-  -ms-grid-column: 10;
+  -ms-grid-column: 11;
   -ms-grid-column-span: 6;
-  grid-column: 10/span 6;
+  grid-column: 11/span 6;
 }
 .features .icon-group {
   list-style-type: none;
@@ -4064,6 +4066,6 @@ table td {
     font-size: 3.5rem;
   }
 }
-.tagline-word {
+.tagline-line, .tagline-word {
   overflow: hidden;
 }

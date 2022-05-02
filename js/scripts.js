@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
         linesClass: 'tagline-line',
     })
 
-    gsap.set('.tagline-char', {
+    gsap.set('.tagline-word', {
         y: 150,
-        rotateX: 5,
+        skewX: 15,
         d: 1350,
     })
 
@@ -24,20 +24,21 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < taglines.length; i++) {
         if (taglines[i]) {
             const elem = taglines[i]
-            const chars = elem.querySelectorAll('.tagline-char')
+            const chars = elem.querySelectorAll('.tagline-word')
 
             new ScrollMagic.Scene({
                 triggerElement: elem,
-                triggerHook: 0.75,
+                triggerHook: 0.85,
                 reverse: true,
             })
                 .setTween(
                     gsap.to(chars, {
                         y: 0,
-                        rotateX: 0,
+                        skewX: 0,
                         d: 0,
-                        ease: 'power3.inOut',
-                        stagger: 0.014,
+                        ease: 'power4.inOut',
+                        duration: 1,
+                        stagger: 0.06,
                     })
                 )
                 .addTo(controller)
