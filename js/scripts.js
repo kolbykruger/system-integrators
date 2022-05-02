@@ -45,6 +45,32 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })
 
+//background magic
+document.addEventListener('DOMContentLoaded', function () {
+    const magicBackground = document.getElementById('background-magic')
+    const elems = document.querySelectorAll('section')
+
+    if (magicBackground) {
+        for (var i = 0; i < elems.length; i++) {
+            if (elems[i]) {
+                const magicColor = elems[i].dataset.color
+
+                new ScrollMagic.Scene({
+                    triggerElement: elems[i],
+                    triggerHook: 0.9,
+                })
+                    .setTween(
+                        TweenMax.to(magicBackground, 1.5, {
+                            backgroundColor: magicColor ? magicColor : 'transparent',
+                        })
+                    )
+                    //.addIndicators()
+                    .addTo(controller)
+            }
+        }
+    }
+})
+
 //Features
 document.addEventListener('DOMContentLoaded', function () {
     let elems = document.querySelectorAll('.features img, .introduction img')
