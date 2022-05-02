@@ -2258,7 +2258,6 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
   margin: 1em;
   border-radius: 0.25em;
   overflow: hidden;
-  background: #fff;
   -webkit-transition: 186ms ease;
   transition: 186ms ease;
 }
