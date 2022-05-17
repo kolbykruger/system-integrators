@@ -182,6 +182,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         }
+
+        //Set first one to show on load
+        const randomNumber = Math.floor(Math.random() * productFeature.length)
+        const activeElemOnLoad = productFeature[randomNumber]
+        const activeButtonOnLoad = productButton[randomNumber]
+
+        if (activeElemOnLoad && activeButtonOnLoad) {
+            let activeId = activeButtonOnLoad.dataset.id
+            let activeButtonBounds = activeButtonOnLoad.getBoundingClientRect()
+            let activeElem = productFeatures.querySelector('.feature-box[data-id="' + activeId + '"]')
+
+            setActive({
+                selectedButton: activeButtonOnLoad,
+                selectedFeature: activeElem,
+                selectedBounds: activeButtonBounds,
+            })
+        }
     }
 })
 
