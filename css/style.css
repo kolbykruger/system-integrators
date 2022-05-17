@@ -620,12 +620,12 @@ p, figure:not(.fig) figcaption {
 }
 @media screen and (min-width: 38rem) {
   p, figure:not(.fig) figcaption {
-    font-size: calc(1rem + 0.125 * ((100vw - 38rem) / 32));
+    font-size: calc(1rem + 0.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
   p, figure:not(.fig) figcaption {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -3143,7 +3143,7 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
   color: #F99F34;
   font-family: cronos-pro, sans-serif;
   font-weight: 600;
-  font-size: 2.75rem;
+  font-size: 3.25rem;
   margin-bottom: 0.125em;
 }
 .introduction .stats-item .label {
@@ -3584,7 +3584,7 @@ table td {
   color: #F99F34;
   font-family: cronos-pro, sans-serif;
   font-weight: 600;
-  font-size: 2.75rem;
+  font-size: 3.25rem;
   margin-bottom: 0.125em;
 }
 .introduction .stats-item .label {
