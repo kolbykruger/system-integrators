@@ -149,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     selectedButton,
                     selectedFeature,
                     selectedBounds,
+                    focus: true,
                 })
             })
 
@@ -165,7 +166,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 props.selectedFeature.style.top = props.selectedBounds.top - 16 - parentBounds.top + 'px'
                 props.selectedFeature.style.left = props.selectedBounds.left - 16 - parentBounds.left + 'px'
 
-                props.selectedFeature.focus()
+                if (props.focus) {
+                    props.selectedFeature.focus()
+                }
             }
 
             function removeActive(props) {
@@ -197,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 selectedButton: activeButtonOnLoad,
                 selectedFeature: activeElem,
                 selectedBounds: activeButtonBounds,
+                focus: false,
             })
         }
     }
